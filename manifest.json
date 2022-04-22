@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Access Reader",
+    "minimum_chrome_version": "24.0.1307.0",
+    "version": "0.0.1",
+    "homepage_url": "https://sarahmorrisonsmith.com/",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "https://sarahmorrisonsmith.com/*"
+        ],
+
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/reader.js"
+        ],
+
+        "css": ["css/reader.css"],
+        "run_at": "document_idle"
+    }]
+}
